@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xan's Graphics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #000000, #330033);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            position: relative;
+        }
+        header img {
+            width: 200px;
+            height: auto;
+        }
+        .social-icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 120px;
+        }
+        .social-icons a {
+            color: #ffffff;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #9b00ff;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+        .box {
+            background: #1c1c1c;
+            border: 2px solid #5f059b;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            height: auto;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
+        }
+        .box:hover {
+            transform: scale(1.1);
+            background-color: #9b00ff;
+            border-color: #000;
+            color: #000;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .image-preview {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid #9b00ff;
+            box-shadow: 0 0 20px #9b00ff;
+        }
+        .image-preview img {
+            width: 100%;
+            display: none;
+        }
+        .image-preview img.active {
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .preview-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1.5em;
+        }
+        .preview-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .preview-button.left {
+            left: 10px;
+        }
+        .preview-button.right {
+            right: 10px;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .contributors {
+            text-align: center;
+            padding: 50px;
+        }
+        .contributors h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .contributors p {
+            font-size: 1.2em;
+            color: #ffffff;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contributors p img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #ffffff;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        .tip-button {
+            cursor: pointer;
+            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #9b00ff, 0 0 40px #9b00ff, 0 0 50px #9b00ff, 0 0 60px #9b00ff, 0 0 70px #9b00ff;
+        }
+        .tip-button a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260702982341787708/XAN_1.png?ex=669048a5&is=668ef725&hm=bb2e60dfc3fabce380a1fa5eb47898049803ef4bc9b8190d00e1e00a5f8dab01&" alt="Xan's Logo">
+        <div class="social-icons">
+            <a href="https://discord.gg/9kCzVscAWG" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/xanmotions" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@xan.mdrp" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2>Logo Design</h2>
+            <p>Custom logos to make your server stand out. We create unique and eye-catching logos tailored to your specifications.</p>
+            <p>Prices start at $50.</p>
+        </div>
+        <div class="box">
+            <h2>Vehicle Liveries</h2>
+            <p>Realistic and high-quality vehicle liveries for various emergency services. Our liveries ensure your vehicles look professional and authentic.</p>
+            <p>Prices start at $30.</p>
+        </div>
+        <div class="box">
+            <h2>EUP Packs</h2>
+            <p>Enhanced Emergency Uniform Packs to make your characters look their best. We provide detailed and realistic uniform designs.</p>
+            <p>Prices start at $40.</p>
+        </div>
+    </div>
+    <div class="image-preview">
+        <button class="preview-button left" onclick="prevImage()"><i class="fas fa-chevron-left"></i></button>
+        <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260710540121210953/PUNCHMADERP.png?ex=66904faf&is=668efe2f&hm=0505a94b160ec7a5d472db779731793296462e023e8299093565cbcff0592143&" class="active" alt="Preview 1">
+        <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260713325961023488/HORIZONRP.png?ex=66905247&is=668f00c7&hm=db9f9956697162c18170ecf1f7d5fe6b49cca689c32ae94e73d36bb69f5a41a6&" alt="Preview 2">
+        <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260721146740084860/TRAPHOUSERP_1.png?ex=66905990&is=668f0810&hm=ef5b21875d50e692cbdb11c69059cec955cea796930db99bc72ba7d881ac88de&" alt="Preview 3">
+        <button class="preview-button right" onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="contributors">
+        <h2>Contributors</h2>
+        <p>
+            <img src="https://cdn.discordapp.com/avatars/849789241281347595/80a6cd6554ee3684cd2521a101268ab8.png?size=128" alt="Roze Avatar">
+            <img src="https://cdn.discordapp.com/avatars/1215522544564703323/778ec3814d6603273b2f99baf194f6a9.png?size=128" alt="Xan Avatar">
+        </p>
+    </div>
+    <footer>
+        <p>© 2024 Xan's Graphics. All rights reserved.</p>
+        <p>Made with ❤️ buy me a coffee</p>
+        <p class="tip-button"><a href="https://cash.app/$chiefrhett">☕</a></p>
+        <p>Contact: admin@xandevs.io</p>
+    </footer>
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.image-preview img');
+
+        function showImage(index) {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = index;
+            images[currentImageIndex].classList.add('active');
+        }
+
+        function prevImage() {
+            const newIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(newIndex);
+        }
+
+        function nextImage() {
+            const newIndex = (currentImageIndex + 1) % images.length;
+            showImage(newIndex);
+        }
+
+        setInterval(() => {
+            nextImage();
+        }, 10000); // Change image every 10 seconds
+    </script>
+</body>
+</html>
