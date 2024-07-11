@@ -85,6 +85,7 @@
         .image-preview img {
             width: 100%;
             display: none;
+            pointer-events: none; /* Disable pointer events for images */
         }
         .image-preview img.active {
             display: block;
@@ -101,6 +102,7 @@
             cursor: pointer;
             transition: background 0.3s;
             font-size: 1.5em;
+            z-index: 1; /* Ensure buttons appear above images */
         }
         .preview-button:hover {
             background: rgba(0, 0, 0, 0.8);
@@ -128,6 +130,36 @@
             margin-bottom: 20px;
             color: #ffffff;
         }
+
+        .faq {
+            text-align: center;
+            padding: 50px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .faq h2 {
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            background: #1c1c1c;
+            border: 2px solid #5f059b;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            height: auto;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
+            display: inline-block; /* Adjusted for 3D effect */
+        }
+        .faq-item:hover {
+            transform: scale(1.1);
+            background-color: #9b00ff;
+            border-color: #000;
+            color: #000;
+        }
+
         .contributors p {
             font-size: 1.2em;
             color: #ffffff;
@@ -174,23 +206,45 @@
             <h2>Logo Design</h2>
             <p>Custom logos to make your server stand out. We create unique and eye-catching logos tailored to your specifications.</p>
             <p>Prices start at $50.</p>
+            <p>Can reach a total of over $400.</p>
         </div>
         <div class="box">
             <h2>Vehicle Liveries</h2>
             <p>Realistic and high-quality vehicle liveries for various emergency services. Our liveries ensure your vehicles look professional and authentic.</p>
             <p>Prices start at $30.</p>
+            <p>Can reach a total of over $400.</p>
         </div>
         <div class="box">
             <h2>EUP Packs</h2>
             <p>Enhanced Emergency Uniform Packs to make your characters look their best. We provide detailed and realistic uniform designs.</p>
             <p>Prices start at $40.</p>
+            <p>Can reach a total of over $400.</p>
+            <p>Currently commissions are closed for EUP</p>
         </div>
     </div>
+    <div class="faq">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <h3>What services do you offer?</h3>
+            <p>We offer custom logo design, vehicle liveries, and EUP packs for FiveM.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I place an order?</h3>
+            <p>You can contact us through our email or visit our Discord server for more details.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you offer refunds?</h3>
+            <p>Refunds are handled on a case-by-case basis. Contact us for more information.</p>
+        </div>
+    </div>
+
     <div class="image-preview">
         <button class="preview-button left" onclick="prevImage()"><i class="fas fa-chevron-left"></i></button>
         <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260710540121210953/PUNCHMADERP.png?ex=66904faf&is=668efe2f&hm=0505a94b160ec7a5d472db779731793296462e023e8299093565cbcff0592143&" class="active" alt="Preview 1">
         <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260713325961023488/HORIZONRP.png?ex=66905247&is=668f00c7&hm=db9f9956697162c18170ecf1f7d5fe6b49cca689c32ae94e73d36bb69f5a41a6&" alt="Preview 2">
         <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260721146740084860/TRAPHOUSERP_1.png?ex=66905990&is=668f0810&hm=ef5b21875d50e692cbdb11c69059cec955cea796930db99bc72ba7d881ac88de&" alt="Preview 3">
+        <img src="https://cdn.discordapp.com/attachments/1256384420169121986/1260753421854572655/RELENTLESS_2.png?ex=6690779f&is=668f261f&hm=4c1ba3f alt="Preview 4">
+        <img src="https://media.discordapp.net/attachments/1260418819994681385/1260743425565659156/wizzardbanner.png?ex=66906e50&is=668f1cd0&hm=8a34fe82d12928c938d8924199236710c6abe6a8ec296e24b80de30c164cd312&=&format=webp&quality=lossless" alt="Preview 5">
         <button class="preview-button right" onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
     </div>
     <div class="contributors">
@@ -229,6 +283,11 @@
         setInterval(() => {
             nextImage();
         }, 10000); // Change image every 10 seconds
+
+        // Disable right-click context menu on preview images
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+        });
     </script>
 </body>
 </html>
