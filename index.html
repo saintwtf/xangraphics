@@ -24,7 +24,6 @@
             width: 200px;
             height: auto;
         }
-
         BANNER {
             text-align: center;
             padding: 10px;
@@ -34,7 +33,6 @@
             padding: 10px;
             margin: 5px 0;
         }
-
         .social-icons {
             position: absolute;
             top: 20px;
@@ -51,6 +49,24 @@
         }
         .social-icons a:hover {
             color: #9b00ff;
+        }
+        .login-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: transparent;
+            color: #9b00ff;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+            border-radius: 5px;
+        }
+        .login-button:hover {
+            background: #9b00ff;
+            color: #ffffff;
+            box-shadow: 0 0 10px #9b00ff, 0 0 20px #9b00ff, 0 0 30px #9b00ff;
         }
         .container {
             display: flex;
@@ -141,7 +157,6 @@
             margin-bottom: 20px;
             color: #ffffff;
         }
-
         .faq {
             text-align: center;
             padding: 50px;
@@ -170,7 +185,6 @@
             border-color: #000;
             color: #000;
         }
-
         .contributors p {
             font-size: 1.2em;
             color: #ffffff;
@@ -201,6 +215,45 @@
             color: #ffffff;
             text-decoration: none;
         }
+        @media (max-width: 768px) {
+            header {
+                padding: 30px;
+            }
+            .social-icons {
+                top: 10px;
+                right: 10px;
+                width: 100px;
+            }
+            .login-button {
+                top: 10px;
+                left: 10px;
+                font-size: 1em;
+                padding: 5px 10px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .box {
+                width: 100%;
+                margin: 10px 0;
+            }
+            .faq-item {
+                width: 100%;
+                margin: 10px 0;
+            }
+            .image-preview {
+                margin: 20px auto;
+            }
+        }
+        @media (max-width: 480px) {
+            .social-icons {
+                width: 80px;
+            }
+            .preview-button {
+                font-size: 1em;
+                padding: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -208,100 +261,83 @@
         <p>As of 7/10/24. Everything we sell is 10% off. Also if you boost it gives you an extra 10% off</p>
     </BANNER>
     <header>
-        <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260702982341787708/XAN_1.png?ex=669048a5&is=668ef725&hm=bb2e60dfc3fabce380a1fa5eb47898049803ef4bc9b8190d00e1e00a5f8dab01&" alt="Xan's Logo">
+        <a href="https://discord.com/oauth2/authorize?client_id=1260782678450638868&response_type=code&redirect_uri=https%3A%2F%2Fxan5m.vercel.app&scope=connections" class="login-button">Login</a>
+        <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260702982341787708/XAN_1.png?ex=669048a5&is=668ef725&hm=bb2e60dfc3fabce380a1fa5eb47898049803ef4bc9b8190d00e1e00a5f8dab01&" alt="Xan's Graphics Logo">
+        <h1>Xan's Graphics</h1>
         <div class="social-icons">
-            <a href="https://discord.gg/9kCzVscAWG" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://www.instagram.com/xanmotions" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@xan.mdrp" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
         </div>
     </header>
     <div class="container">
         <div class="box">
-            <h2>Logo Design</h2>
-            <p>Custom logos to make your server stand out. We create unique and eye-catching logos tailored to your specifications.</p>
-            <p>Prices start at $50.</p>
-            <p>Can reach a total of over $400.</p>
+            <h2>Custom Logos</h2>
+            <p>Create your unique identity with custom logos designed to perfection.</p>
         </div>
         <div class="box">
-            <h2>Vehicle Liveries</h2>
-            <p>Realistic and high-quality vehicle liveries for various emergency services. Our liveries ensure your vehicles look professional and authentic.</p>
-            <p>Prices start at $30.</p>
-            <p>Can reach a total of over $400.</p>
+            <h2>Enhanced EUP</h2>
+            <p>Get high-quality EUP packs that bring realism and variety to your server.</p>
         </div>
         <div class="box">
-            <h2>EUP Packs</h2>
-            <p>Enhanced Emergency Uniform Packs to make your characters look their best. We provide detailed and realistic uniform designs.</p>
-            <p>Prices start at $40.</p>
-            <p>Can reach a total of over $400.</p>
-            <p>Currently commissions are closed for EUP</p>
+            <h2>Exclusive Liveries</h2>
+            <p>Stand out with exclusive liveries for your fleet of vehicles.</p>
         </div>
     </div>
-    <div class="faq">
-        <h2>FAQ</h2>
-        <div class="faq-item">
-            <h3>What services do you offer?</h3>
-            <p>We offer custom logo design, vehicle liveries, and EUP packs for FiveM.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How can I place an order?</h3>
-            <p>You can contact us through our email or visit our Discord server for more details.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Do you offer refunds?</h3>
-            <p>Refunds are handled on a case-by-case basis. Contact us for more information.</p>
-        </div>
-    </div>
-
     <div class="image-preview">
-        <button class="preview-button left" onclick="prevImage()"><i class="fas fa-chevron-left"></i></button>
+        <button class="preview-button left" onclick="prevImage()">&#9664;</button>
         <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260710540121210953/PUNCHMADERP.png?ex=66904faf&is=668efe2f&hm=0505a94b160ec7a5d472db779731793296462e023e8299093565cbcff0592143&" class="active" alt="Preview 1">
         <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260713325961023488/HORIZONRP.png?ex=66905247&is=668f00c7&hm=db9f9956697162c18170ecf1f7d5fe6b49cca689c32ae94e73d36bb69f5a41a6&" alt="Preview 2">
         <img src="https://cdn.discordapp.com/attachments/1260418819994681385/1260721146740084860/TRAPHOUSERP_1.png?ex=66905990&is=668f0810&hm=ef5b21875d50e692cbdb11c69059cec955cea796930db99bc72ba7d881ac88de&" alt="Preview 3">
-        <img src="https://cdn.discordapp.com/attachments/1256384420169121986/1260753421854572655/RELENTLESS_2.png?ex=6690779f&is=668f261f&hm=4c1ba3f" alt="Preview 4">
+        <img src="https://cdn.discordapp.com/attachments/1256384420169121986/1260753421854572655/RELENTLESS_2.png?ex=6690779f&is=668f261f&hm=4c1ba3f005275442aaee85449e8ea96dfdf9b4d0d093a6047da4c56a6db8d88c&" alt="Preview 4">
         <img src="https://media.discordapp.net/attachments/1260418819994681385/1260743425565659156/wizzardbanner.png?ex=66906e50&is=668f1cd0&hm=8a34fe82d12928c938d8924199236710c6abe6a8ec296e24b80de30c164cd312&=&format=webp&quality=lossless" alt="Preview 5">
-        <button class="preview-button right" onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
+        <button class="preview-button right" onclick="nextImage()">&#9654;</button>
     </div>
     <div class="contributors">
         <h2>Contributors</h2>
-        <p>
-            <img src="https://cdn.discordapp.com/avatars/849789241281347595/80a6cd6554ee3684cd2521a101268ab8.png?size=128" alt="Roze Avatar">
-            <img src="https://cdn.discordapp.com/avatars/1215522544564703323/778ec3814d6603273b2f99baf194f6a9.png?size=128" alt="Xan Avatar">
-        </p>
+        <p><img src="https://cdn.discordapp.com/avatars/849789241281347595/80a6cd6554ee3684cd2521a101268ab8.png?size=512&format=webp&quality=lossless&width=0&height=256" alt="Roze Avatar"></p>
+        <p><img src="https://cdn.discordapp.com/avatars/1215522544564703323/778ec3814d6603273b2f99baf194f6a9.png?size=512&format=webp&quality=lossless&width=0&height=256" alt="Xan Avatar"></p>
+    </div>
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>What services do you offer?</h3>
+            <p>We offer a range of services including custom logos, EUP, liveries, and more.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I contact you?</h3>
+            <p>You can contact us through our Discord server or via email.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What are your payment options?</h3>
+            <p>We accept payments through PayPal and major credit cards.</p>
+        </div>
     </div>
     <footer>
-        <p>© 2024 Xan's Graphics. All rights reserved.</p>
-        <p>Made with ❤️ buy me a coffee</p>
-        <p class="tip-button"><a href="https://cash.app/$chiefrhett">☕</a></p>
-        <p>Contact: admin@xandevs.io</p>
+        <p>&copy; 2024 Xan's Graphics</p>
+        <p>Made with ❤️</p>
+        <p class="tip-button"><a href="https://www.buymeacoffee.com/xan"><i class="fas fa-coffee"></i> Tip</a></p>
+        <p>Contact us at: admin@xandevs.io</p>
     </footer>
     <script>
-        let currentImageIndex = 0;
+        let currentImage = 0;
         const images = document.querySelectorAll('.image-preview img');
 
         function showImage(index) {
-            images[currentImageIndex].classList.remove('active');
-            currentImageIndex = index;
-            images[currentImageIndex].classList.add('active');
+            images[currentImage].classList.remove('active');
+            currentImage = (index + images.length) % images.length;
+            images[currentImage].classList.add('active');
         }
 
         function prevImage() {
-            const newIndex = (currentImageIndex - 1 + images.length) % images.length;
-            showImage(newIndex);
+            showImage(currentImage - 1);
         }
 
         function nextImage() {
-            const newIndex = (currentImageIndex + 1) % images.length;
-            showImage(newIndex);
+            showImage(currentImage + 1);
         }
 
-        setInterval(() => {
-            nextImage();
-        }, 10000); // Change image every 10 seconds
-
-        // Disable right-click context menu on preview images
-        document.addEventListener('contextmenu', function (event) {
-            event.preventDefault();
-        });
+        document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 </body>
 </html>
