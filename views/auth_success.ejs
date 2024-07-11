@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication Successful</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1260418819994681385/1260702982341787708/XAN_1.png?ex=669048a5&is=668ef725&hm=bb2e60dfc3fabce380a1fa5eb47898049803ef4bc9b8190d00e1e00a5f8dab01&">
+
+  <style>
+    body {
+      background-image: url('https://cdn.discordapp.com/attachments/1260418819994681385/1260749800626982942/RELENTLESS_2.png?ex=66907440&is=668f22c0&hm=1ac6a30045c1c5f59a1256f2e87dd7c1360c88944e4411c0c889bc0cc86b5d53&');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+    }
+    .success-container {
+      text-align: center;
+      margin-top: 20px;
+      animation: fadeInUp 0.6s ease-out;
+      z-index: 1; /* Ensure content appears above overlay */
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-top: 20px;
+      border: 2px solid #fff;
+      animation: zoomIn 0.8s ease-out;
+    }
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-out;
+    }
+    .join-button {
+      display: inline-block;
+      background-color: #00000000;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .join-button:hover {
+      background-color: #7c7777;
+    }
+    .verified-icon {
+      width: 20px; /* Adjust size as needed */
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.5);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="success-container">
+    <h1>Login Successful!</h1>
+    <img src="<%= avatar_url %>" alt="Discord Avatar" class="avatar">
+    <p>Welcome, <strong><%= username %></strong><img src="https://cdn.discordapp.com/attachments/1256384420169121986/1260888268979966083/2107-bluecheck.png?ex=6690f535&is=668fa3b5&hm=514d5b7a49e220f8691b684d5ea0538c45dcc483e4b00f48935742602f295fdf&" alt="Verified" class="verified-icon"></p>
+    <a href="https://discord.com/invite/9kCzVscAWG" class="join-button">Join our Discord server</a>
+  </div>
+</body>
+</html>
